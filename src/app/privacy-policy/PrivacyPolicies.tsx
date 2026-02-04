@@ -53,10 +53,10 @@ export function PrivacyPolicies() {
                         If you create an account to take advantage of the full range of services offered on Razorpay, we ask for and record Personal Information such as your name, email address and mobile number. We may collect and store your Sensitive Personal Data or Information (such as any financial information including inter alia credit card, debit card details, bank account and know your customer ("KYC") documents as per RBI regulations and any other information as may be applicable) that the User may opt to save in the User account created with Razorpay.
                     </p>
                     <p>
-                        We use your email address to send you updates, news, and newsletters (if you willingly subscribe to the newsletter during signup, or anytime after signup) and contact you on behalf of other Users (such other Users who send you friend requests, personal messages, or other social collaboration based events).
+                        We use your email address to send you updates, news, and newsletters (if you willingly subscribe to the newsletter during signup, or anytime after signup) and contact you on behalf of other Users (such other Users who send you friend requests, personal messages, or other social collaboration based events). If you do not want to receive communications from us that are not relevant to you or your use of our services, please click on the unsubscribe link provided at the bottom of such e-mails sent to you by us.
                     </p>
                     <p>
-                        If you do not want to receive communications from us that are not relevant to you or your use of our services, please click on the unsubscribe link provided at the bottom of such e-mails sent to you by us. We use your mobile numbers to send you transaction alerts and SMS alerts based on your preferences. If you do not wish to receive such SMSs from us, please notify us at razorpay.com/support to stop receiving SMSs from us.
+                        We use your mobile numbers to send you transaction alerts and SMS alerts based on your preferences. If you do not wish to receive such SMSs from us, please notify us at razorpay.com/support to stop receiving SMSs from us.
                     </p>
                     <p>
                         Razorpay assures that your Personal Information will not be made public or sold to any third party. The User shall have an option to erase any information provided by the User including Personal Information. If a User opts for the said option of erasure, Razorpay shall delete all stored information of the User from its servers.
@@ -72,7 +72,7 @@ export function PrivacyPolicies() {
                 </p>
             </section>
 
-            {/* 5. Activity and Intellectual Property */}
+            {/* 5. Activity and IP Rights */}
             <section className="mb-10">
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">Activity</h2>
                 <div className="space-y-4 text-sm md:text-base text-gray-700 text-justify">
@@ -112,16 +112,13 @@ export function PrivacyPolicies() {
                         We may use the information we collect in connection with your use of Razorpay (including your Personal Information) in order to investigate, enforce, and apply our terms and conditions and Privacy Policy.
                     </p>
                     <p>
-                        We do not share your Personal Information with any third party apart from financial institutions such as banks, RBI or other regulatory agencies (as may be required) and to provide you with services that we offer through Razorpay, conduct quality assurance testing, facilitate creation of accounts, provide technical and customer support, or provide specific services, such as synchronization of your contacts with other software applications, in accordance with your instructions. These third parties are required not to use your Personal Information other than to provide the services requested by you.
+                        We do not share your Personal Information with any third party apart from financial institutions such as banks, RBI or other regulatory agencies (as may be required) and to provide you with services that we offer through Razorpay, conduct quality assurance testing, facilitate creation of accounts, provide technical and customer support, or provide specific services, such as synchronization of your contacts with other software applications, in accordance with your instructions.
                     </p>
                     <p>
                         We may share your Personal Information with our parent company, subsidiaries, joint ventures, or other companies under a common control (collectively, the "Affiliates") that we may have now or in the future, in which case we will require them to honor this Privacy Policy. If another company acquires our company or our assets, that company will possess your Personal Information, and will assume the rights and obligations with respect to that information as described in this Privacy Policy.
                     </p>
                     <p>
-                        We may disclose your Personal Information to third parties in a good faith belief that such disclosure is reasonably necessary to (a) take action regarding suspected illegal activities; (b) enforce or apply our terms and conditions and Privacy Policy; (c) comply with legal process, such as a search warrant, subpoena, statute, or court order; or (d) protect our rights, reputation, and property, or that of our Users, Affiliates, or the public. Please note that we are not required to question or contest the validity of any search warrant, subpoena or other similar governmental request that we receive.
-                    </p>
-                    <p>
-                        We may disclose information in the aggregate to third parties relating to User behavior in connection with actual or prospective business relationship with those third parties, such as advertisers and content distributors. For example, we may disclose the number of Users that have been exposed to, or clicked on, advertising banners.
+                        We may disclose your Personal Information to third parties in a good faith belief that such disclosure is reasonably necessary to (a) take action regarding suspected illegal activities; (b) enforce or apply our terms and conditions and Privacy Policy; (c) comply with legal process, such as a search warrant, subpoena, statute, or court order; or (d) protect our rights, reputation, and property, or that of our Users, Affiliates, or the public.
                     </p>
                 </div>
             </section>
@@ -157,7 +154,7 @@ export function PrivacyPolicies() {
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">Modifications and Applicable Law</h2>
                 <div className="space-y-4 text-sm md:text-base text-gray-700 text-justify">
                     <p>
-                        Our Privacy Policy is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically. These changes will be effective immediately on the Users of Razorpay. Please note that at all times you are responsible for updating your Personal Information, including to provide us with your most current e-mail address. If you do not wish to permit changes in our use of your Personal Information, you must notify us promptly that you wish to deactivate your account with us. Continued use of Razorpay after any change/ amendment to this Privacy Policy shall indicate your acknowledgement of such changes and agreement to be bound by the terms and conditions of such changes.
+                        Our Privacy Policy is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically. These changes will be effective immediately on the Users of Razorpay. Continued use of Razorpay after any change/ amendment to this Privacy Policy shall indicate your acknowledgement of such changes and agreement to be bound by the terms and conditions of such changes.
                     </p>
                     <p>
                         Your use of this Website will be governed by and construed in accordance with the laws of India. The Users agree that any legal action or proceedings arising out of your use may be brought exclusively in the competent courts/ tribunals having jurisdiction in Bengaluru in India and irrevocably submit themselves to the jurisdiction of such courts/tribunals.
@@ -165,7 +162,7 @@ export function PrivacyPolicies() {
                 </div>
             </section>
 
-            {/* 11. Complaints and Grievance Redressal - Layout matched to screenshot */}
+            {/* 11. Complaints and Grievance Redressal */}
             <section className="mt-12 pt-8 border-t border-gray-200">
                 <h2 className="text-2xl font-bold mb-6 text-gray-900">Complaints and Grievance Redressal</h2>
                 <div className="space-y-4 text-sm text-gray-700 mb-8 text-justify">
@@ -199,41 +196,41 @@ export function PrivacyPolicies() {
                 </div>
             </section>
 
-            {/* 12. Acceptance Details - Layout matched to screenshot */}
-            <section className="mt-16 bg-white border border-gray-100 rounded-lg p-8">
+            {/* 12. Acceptance Details */}
+            <section className="mt-16 bg-gray-50 border border-gray-100 rounded-lg p-8">
                 <h2 className="text-2xl font-bold mb-8 text-gray-900 border-b pb-4">Acceptance Details</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 gap-x-8 text-sm">
                     <div className="space-y-6">
                         <div>
-                            <p className="text-gray-500 font-bold mb-1 uppercase tracking-tight">Owner Name</p>
+                            <p className="text-gray-500 font-bold mb-1 uppercase text-xs">Owner Name</p>
                             <p className="font-semibold text-gray-900">BARUN KUMAR SINGH</p>
                         </div>
                         <div>
-                            <p className="text-gray-500 font-bold mb-1 uppercase tracking-tight">Date Of Acceptance</p>
+                            <p className="text-gray-500 font-bold mb-1 uppercase text-xs">Date Of Acceptance</p>
                             <p className="font-semibold text-gray-900">2026-02-03 20:23:42 IST</p>
                         </div>
                         <div>
-                            <p className="text-gray-500 font-bold mb-1 uppercase tracking-tight">Email</p>
+                            <p className="text-gray-500 font-bold mb-1 uppercase text-xs">Email</p>
                             <p className="font-semibold text-gray-900 underline">info.qubnixtechnologies@gmail.com</p>
                         </div>
                     </div>
                     <div className="space-y-6">
                         <div>
-                            <p className="text-gray-500 font-bold mb-1 uppercase tracking-tight">Owner Id</p>
-                            <p className="font-semibold text-gray-900">SBi5Der TOpn6yK</p>
+                            <p className="text-gray-500 font-bold mb-1 uppercase text-xs">Owner Id</p>
+                            <p className="font-semibold text-gray-900 uppercase">SBi5Der TOpn6yK</p>
                         </div>
                         <div>
-                            <p className="text-gray-500 font-bold mb-1 uppercase tracking-tight">Signatory Name</p>
+                            <p className="text-gray-500 font-bold mb-1 uppercase text-xs">Signatory Name</p>
                             <p className="font-semibold text-gray-900">BARUN KUMAR SINGH</p>
                         </div>
                     </div>
                     <div className="space-y-6">
                         <div>
-                            <p className="text-gray-500 font-bold mb-1 uppercase tracking-tight">IP Address</p>
+                            <p className="text-gray-500 font-bold mb-1 uppercase text-xs">IP Address</p>
                             <p className="font-semibold text-gray-900">10.26.126.101</p>
                         </div>
                         <div>
-                            <p className="text-gray-500 font-bold mb-1 uppercase tracking-tight">Contact Number</p>
+                            <p className="text-gray-500 font-bold mb-1 uppercase text-xs">Contact Number</p>
                             <p className="font-semibold text-gray-900">+917797919640</p>
                         </div>
                     </div>
