@@ -1,0 +1,64 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-home",
+      "description": "A modern office space with developers working on computers, conveying a sense of innovation and technology.",
+      "imageUrl": "https://images.unsplash.com/photo-1531972111231-7482a960e109?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzY5ODQwOTIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern office"
+    },
+    {
+      "id": "portfolio-1",
+      "description": "Screenshot of a sleek e-commerce website dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1748609278627-4b0e483b9b70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWJzaXRlJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc2OTg2NDA5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website dashboard"
+    },
+    {
+      "id": "portfolio-2",
+      "description": "A mobile phone showcasing a modern social media app interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1480694313141-fce5e697ee25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzY5Nzk0MzI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "portfolio-3",
+      "description": "Clean and professional landing page for a corporate client.",
+      "imageUrl": "https://images.unsplash.com/photo-1625315642929-3774ba1d1af4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsYW5kaW5nJTIwcGFnZXxlbnwwfHx8fDE3Njk3OTQzMjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "landing page"
+    },
+    {
+      "id": "portfolio-4",
+      "description": "Complex data visualization dashboard for a software solution.",
+      "imageUrl": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3MDgyMjI3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data dashboard"
+    },
+    {
+      "id": "about-us-team",
+      "description": "A diverse team of professionals collaborating in a bright, modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxidXNpbmVzcyUyMHRlYW18ZW58MHx8fHwxNzY5Nzk3ODg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business team"
+    },
+    {
+      "id": "portfolio-5",
+      "description": "A modern and clean personal portfolio website design.",
+      "imageUrl": "https://images.unsplash.com/photo-1559028006-448665bd7c20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW8lMjB3ZWJzaXRlfGVufDB8fHx8MTc3MDA2NzYyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portfolio website"
+    },
+    {
+      "id": "collegelms-dashboard",
+      "description": "Dashboard of CollegeLMS.in showing various metrics and modules.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3MDExNTAyN3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "saas dashboard"
+    },
+    {
+      "id": "tech-background",
+      "description": "Abstract technology background with glowing lines and nodes.",
+      "imageUrl": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "technology abstract"
+    },
+    {
+      "id": "internship-hero",
+      "description": "Young professionals collaborating and learning in a modern workspace.",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "students learning"
+    }
+  ]
+}

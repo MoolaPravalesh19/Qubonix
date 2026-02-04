@@ -1,0 +1,126 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * Core Philosophy: This ruleset implements a role-based security model with three primary levels of access:
+     * 1. Public Users: Anyone can submit an internship application.
+     * 2. Interns: Authenticated users who can access and update their own assigned tasks and profile information.
+     * 3. Admins: Privileged users with full CRUD access across the entire database for management purposes.
+     *
+     * Data Structure:
+     * - /intern_applications/{appId}: A top-level collection where public internship applications are submitted.
+     * - /interns/{internId}: A collection of approved intern profiles. Each intern has a corresponding document here.
+     * - /interns/{internId}/tasks/{taskId}: A subcollection nested under each intern, containing their assigned tasks. This enforces path-based ownership.
+     * - /roles_admin/{userId}: An existence-based role collection. If a user's UID exists as a document ID here, they are granted admin privileges.
+     *
+     * Key Security Decisions:
+     * - Public Submission: The `/intern_applications` collection is intentionally open for creation to allow anyone to apply, but all submitted data is read-only for non-admins to protect applicant privacy.
+     * - Strict Segregation: Interns are strictly sandboxed to their own data tree (`/interns/{internId}`). They cannot list or view data belonging to other interns.
+     * - Admin Management: Admin privileges are managed securely and efficiently via the `/roles_admin` collection, avoiding the need for custom claims or complex role fields.
+     * - Denormalization for Authorization: This ruleset uses path-based security (`/interns/{internId}/...`) and existence-based roles (`/roles_admin`) to ensure fast, simple, and secure authorization checks without needing costly `get()` calls in rules.
+     */
+
+    // ----------------------------------------------------------------
+    // Helper Functions
+    // ----------------------------------------------------------------
+
+    /**
+     * Checks if the user is signed in.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * Checks if the currently authenticated user's UID matches the provided userId.
+     * This is the primary function for enforcing document ownership.
+     */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /**
+     * Checks if the requesting user has admin privileges.
+     * Admin status is granted if a document with the user's UID exists in the 'roles_admin' collection.
+     */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/roles_admin/$(request.auth.uid));
+    }
+
+    /**
+     * Checks if a document being written to already exists.
+     * Used in update/delete rules to prevent acting on non-existent documents.
+     */
+    function isExistingDoc() {
+      return resource != null;
+    }
+
+    // ----------------------------------------------------------------
+    // Admin & Role Management
+    // ----------------------------------------------------------------
+
+    /**
+     * @description Rules for the admin roles collection. Only existing admins can read or modify this collection.
+     * @path /roles_admin/{userId}
+     * @allow An admin reading the list of all admins. (list)
+     * @deny A regular signed-in user trying to make themselves an admin. (create)
+     * @principle Secures meta-privileges by ensuring only admins can manage other admins.
+     */
+    match /roles_admin/{userId} {
+      allow get, list: if isAdmin();
+      allow create: if isAdmin();
+      allow update, delete: if isAdmin() && isExistingDoc();
+    }
+
+    // ----------------------------------------------------------------
+    // Application & Intern Collections
+    // ----------------------------------------------------------------
+
+    /**
+     * @description Manages public internship applications. Anyone can create (submit) an application, but only admins can view or manage them.
+     * @path /intern_applications/{internApplicationId}
+     * @allow An unauthenticated user submitting a new application. (create)
+     * @deny A signed-in user (non-admin) trying to read a list of all submitted applications. (list)
+     * @principle Allows public write for data submission while protecting submitted PII with admin-only read access.
+     */
+    match /intern_applications/{internApplicationId} {
+      allow get, list: if isAdmin();
+      allow create: if true;
+      allow update, delete: if isAdmin() && isExistingDoc();
+    }
+
+    /**
+     * @description Manages profiles for approved interns. Admins have full control, while an intern can only read their own profile.
+     * @path /interns/{internId}
+     * @allow An authenticated intern reading their own profile document. (get)
+     * @deny An intern trying to update another intern's profile. (update)
+     * @principle Enforces data privacy by allowing interns to see only their own profile, while admins have full management capabilities.
+     */
+    match /interns/{internId} {
+      allow get: if isOwner(internId) || isAdmin();
+      allow list: if isAdmin();
+      allow create: if isAdmin() && request.resource.data.id == internId;
+      allow update: if isAdmin() && isExistingDoc() && request.resource.data.id == resource.data.id;
+      allow delete: if isAdmin() && isExistingDoc();
+    }
+
+    // ----------------------------------------------------------------
+    // Intern-Specific Subcollections
+    // ----------------------------------------------------------------
+
+    /**
+     * @description Manages tasks assigned to a specific intern. Interns can view their own tasks and update them to submit work. Admins manage the lifecycle of tasks.
+     * @path /interns/{internId}/tasks/{taskId}
+     * @allow An intern listing all tasks assigned to them. (list)
+     * @deny An intern trying to delete a task assigned to them. (delete)
+     * @principle Path-based ownership restricts access to an intern's own data tree, allowing them read/update access while reserving create/delete for admins.
+     */
+    match /interns/{internId}/tasks/{taskId} {
+      allow get, list: if isOwner(internId) || isAdmin();
+      allow create: if isAdmin() && request.resource.data.internId == internId;
+      allow update: if (isOwner(internId) || isAdmin()) && isExistingDoc() && request.resource.data.internId == resource.data.internId;
+      allow delete: if isAdmin() && isExistingDoc();
+    }
+  }
+}
