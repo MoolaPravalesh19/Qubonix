@@ -39,6 +39,7 @@ export function getSdks(firebaseApp: FirebaseApp) {
     firestore: getFirestore(firebaseApp)
   };
 }
+export const db = initializeFirebase().firestore;
 
 export * from './provider';
 export * from './client-provider';

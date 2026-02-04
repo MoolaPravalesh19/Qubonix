@@ -1,5 +1,5 @@
 "use client";
-import { useUser as useAuthUser, useFirestore } from '@/firebase';
+import { useUser as useAuthUser, useFirestore } from '@/lib/firebase';
 import type { UserProfile } from '@/lib/types';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';

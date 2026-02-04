@@ -3,7 +3,7 @@ import './globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
-import { FirebaseClientProvider } from '@/firebase';
+import { FirebaseClientProvider } from '@/lib/firebase';
 
 export const metadata: Metadata = {
   title: 'Qubnix Technologies - Building Next-Generation Digital Solutions',

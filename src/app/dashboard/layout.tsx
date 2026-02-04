@@ -22,7 +22,7 @@ import {
   SidebarTrigger,
   SidebarFooter,
 } from "@/components/ui/sidebar";
-import { useAuth } from "@/firebase";
+import { useAuth } from "@/lib/firebase";
 import { signOut } from "firebase/auth";
 import { useUser } from "@/hooks/use-user";
 import { DashboardSkeleton } from "@/components/dashboard-skeleton";

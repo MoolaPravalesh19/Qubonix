@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { cn } from "@/lib/utils";
-import { useUser as useAuthUser, useAuth } from "@/firebase";
+import { useUser as useAuthUser, useAuth } from "@/lib/firebase";
 import { signOut } from "firebase/auth";
 import { Skeleton } from "./ui/skeleton";
 
